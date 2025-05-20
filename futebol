@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol Total</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004d00;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #009933;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        .noticia {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .galeria img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #004d00;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Futebol Total</h1>
+        <p>Seu portal de notícias sobre o mundo do futebol</p>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Notícias</a>
+        <a href="#">Times</a>
+        <a href="#">Jogadores</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main>
+        <section class="noticia">
+            <h2>Final do Campeonato Brasileiro</h2>
+            <p>O Flamengo venceu o Palmeiras por 2 a 1 em uma final emocionante no Maracanã.</p>
+        </section>
+
+        <section class="noticia">
+            <h2>Messi fala sobre futuro no futebol</h2>
+            <p>Em entrevista, Messi comentou sobre seus planos após a Copa do Mundo.</p>
+        </section>
+
+        <h2>Galeria de Imagens</h2>
+        <div class="galeria">
+            <img src="https://via.placeholder.com/300x200" alt="Jogo de futebol">
+            <img src="https://via.placeholder.com/300x200" alt="Torcida vibrando">
+            <img src="https://via.placeholder.com/300x200" alt="Estádio lotado">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Futebol Total - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>
