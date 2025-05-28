@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos de Computador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #00ffcc;
+        }
+        nav {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #00ffcc;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        section {
+            padding: 20px;
+        }
+        .jogos-destaque {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .jogo {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            width: 300px;
+        }
+        .jogo img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jogos de Computador</h1>
+        <p>Notícias, análises e novidades do mundo gamer</p>
+    </header>
+
+    <nav>
+        <a href="#destaques">Destaques</a>
+        <a href="#generos">Gêneros</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section id="destaques">
+        <h2>Jogos em Destaque</h2>
+        <div class="jogos-destaque">
+            <div class="jogo">
+                <img src="https://via.placeholder.com/300x150" alt="Imagem do jogo 1">
+                <h3>The Witcher 3</h3>
+                <p>Um RPG de ação envolvente com mundo aberto e gráficos incríveis.</p>
+            </div>
+            <div class="jogo">
+                <img src="https://via.placeholder.com/300x150" alt="Imagem do jogo 2">
+                <h3>Valorant</h3>
+                <p>FPS tático competitivo com habilidades especiais e equipes 5v5.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="generos">
+        <h2>Gêneros Populares</h2>
+        <ul>
+            <li>RPG</li>
+            <li>FPS</li>
+            <li>Estratégia</li>
+            <li>Simulação</li>
+            <li>Aventura</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Envie sugestões para: <a href="mailto:contato@jogoscomputador.com">contato@jogoscomputador.com</a></p>
+    </section>
+
+    <footer>
+        &copy; 2025 Jogos de Computador. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
