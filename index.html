@@ -558,6 +558,126 @@ footer {
   bottom: 0;
 }
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jogos de Computador</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --card-bg: #f0f0f0;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #ffffff;
+      --card-bg: #333333;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #ffffff33;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .card h3 {
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #0077cc;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Top Jogos de Computador</h1>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙/☀️</button>
+</header>
+
+<main class="container">
+  <div class="card">
+    <img src="https://via.placeholder.com/300x150.png?text=Jogo+1" alt="Jogo 1">
+    <h3>The Witcher 3</h3>
+    <p>RPG com narrativa envolvente e mundo aberto incrível.</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/300x150.png?text=Jogo+2" alt="Jogo 2">
+    <h3>Counter-Strike: GO</h3>
+    <p>FPS competitivo com milhões de jogadores online.</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/300x150.png?text=Jogo+3" alt="Jogo 3">
+    <h3>Minecraft</h3>
+    <p>Sandbox criativo com possibilidades infinitas.</p>
+  </div>
+</main>
+
+<footer>
+  <p>Feito com ❤️ para fãs de jogos de PC</p>
+</footer>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+  }
+</script>
+
+</body>
+</html>
+
 
 
 
