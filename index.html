@@ -681,4 +681,161 @@ footer {
 
 
 
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogos de Computador</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --card-bg: #f0f0f0;
+      --accent-color: #0077cc;
+    }
+
+    body.theme-dark {
+      --bg-color: #1e1e1e;
+      --text-color: #ffffff;
+      --card-bg: #333333;
+      --accent-color: #4444dd;
+    }
+
+    body.theme-purple {
+      --bg-color: #f5f0ff;
+      --text-color: #2d024d;
+      --card-bg: #e6dcf0;
+      --accent-color: #6a0dad;
+    }
+
+    body.theme-blue {
+      --bg-color: #e7f2ff;
+      --text-color: #003366;
+      --card-bg: #d0e7ff;
+      --accent-color: #0077cc;
+    }
+
+    body.theme-green {
+      --bg-color: #f0fff0;
+      --text-color: #003300;
+      --card-bg: #d0ffd0;
+      --accent-color: #009933;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    header {
+      background: var(--accent-color);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .theme-buttons {
+      margin-top: 1rem;
+    }
+
+    .theme-buttons button {
+      margin: 0.2rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .btn-dark { background: #333; }
+    .btn-purple { background: #6a0dad; }
+    .btn-blue { background: #0077cc; }
+    .btn-green { background: #009933; }
+    .btn-default { background: #555; }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .card h3 {
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--accent-color);
+      color: white;
+    }
+  </style>
+</head>
+<body class="theme-default">
+
+<header>
+  <h1>Top Jogos de Computador</h1>
+  <div class="theme-buttons">
+    <button class="btn-default" onclick="setTheme('default')">Padrão</button>
+    <button class="btn-dark" onclick="setTheme('dark')">Escuro</button>
+    <button class="btn-purple" onclick="setTheme('purple')">Roxo</button>
+    <button class="btn-blue" onclick="setTheme('blue')">Azul</button>
+    <button class="btn-green" onclick="setTheme('green')">Verde</button>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    <img src="https://via.placeholder.com/300x150.png?text=Jogo+1" alt="Jogo 1">
+    <h3>The Witcher 3</h3>
+    <p>RPG com narrativa envolvente e mundo aberto incrível.</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/300x150.png?text=Jogo+2" alt="Jogo 2">
+    <h3>Counter-Strike: GO</h3>
+    <p>FPS competitivo com milhões de jogadores online.</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/300x150.png?text=Jogo+3" alt="Jogo 3">
+    <h3>Minecraft</h3>
+    <p>Sandbox criativo com possibilidades infinitas.</p>
+  </div>
+</main>
+
+<footer>
+  <p>Feito com ❤️ para fãs de jogos de PC</p>
+</footer>
+
+<script>
+  function setTheme(theme) {
+    document.body.className = 'theme-' + theme;
+  }
+</script>
+
+</body>
 </html>
+
+
