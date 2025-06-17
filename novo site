@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mundo Gamer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #00ff99;
+    }
+
+    nav {
+      background-color: #00ff99;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #000;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #1f1f1f;
+      padding: 20px;
+      margin-top: 40px;
+      color: #888;
+    }
+
+    button {
+      background-color: #00ff99;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #00cc77;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mundo Gamer</h1>
+    <p>Seu portal de jogos de computador</p>
+  </header>
+
+  <nav>
+    <a href="#populares">Jogos Populares</a>
+    <a href="#noticias">Notícias</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="populares">
+    <h2>Jogos Populares</h2>
+    <div class="card">
+      <h3>Cyberpunk 2077</h3>
+      <p>Um RPG futurista com mundo aberto e gráficos impressionantes.</p>
+    </div>
+    <div class="card">
+      <h3>Elden Ring</h3>
+      <p>Aventura épica em mundo aberto criada por Hidetaka Miyazaki e George R. R. Martin.</p>
+    </div>
+  </section>
+
+  <section id="noticias">
+    <h2>Notícias</h2>
+    <div class="card">
+      <h3>Steam anuncia nova promoção de verão</h3>
+      <p>Descontos de até 90% em centenas de títulos. Promoção vai até 5 de julho.</p>
+    </div>
+    <div class="card">
+      <h3>Novo trailer de GTA VI</h3>
+      <p>Rockstar Games surpreende fãs com novas imagens e data de lançamento prevista para 2025.</p>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Tem alguma sugestão ou quer divulgar seu jogo? Fale conosco!</p>
+    <button onclick="mostrarMensagem()">Enviar mensagem</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mundo Gamer. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function mostrarMensagem() {
+      alert("Obrigado por entrar em contato! Em breve responderemos.");
+    }
+  </script>
+</body>
+</html>
