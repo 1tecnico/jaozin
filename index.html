@@ -225,5 +225,140 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Site Moderno</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --cor-primaria: #1e90ff;
+      --cor-fundo: #121212;
+      --cor-texto: #f1f1f1;
+      --cor-secundaria: #292929;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--cor-primaria);
+      padding: 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    nav {
+      background-color: var(--cor-secundaria);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--cor-texto);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--cor-primaria);
+    }
+
+    main {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+    }
+
+    h2 {
+      color: var(--cor-primaria);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--cor-secundaria);
+      color: #aaa;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      main {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bem-vindo ao Meu Site</h1>
+    <p>Design moderno e responsivo</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <h2>Início</h2>
+      <p>Este é um exemplo de site com uma skin moderna e escura, ideal para conteúdos sobre tecnologia, jogos ou portfólio pessoal.</p>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre</h2>
+      <p>Você pode personalizar as cores, fontes e layouts facilmente com variáveis CSS. O site também se adapta a dispositivos móveis.</p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Inclua aqui suas informações de contato ou um formulário simples.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
+
 
 
