@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mochila Escolar Digital</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef6ff;
+    }
+
+    header {
+      background: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      color: #1e88e5;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    footer {
+      background: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎒 Mochila Escolar Digital</h1>
+    <p>Organize tudo que você vai estudar durante o ano</p>
+  </header>
+
+  <main>
+
+    <div class="card">
+      <h2>📘 Português</h2>
+      <ul>
+        <li>Interpretação de texto</li>
+        <li>Gramática</li>
+        <li>Produção de redação</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>➗ Matemática</h2>
+      <ul>
+        <li>Operações básicas</li>
+        <li>Frações</li>
+        <li>Problemas</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🌍 História</h2>
+      <ul>
+        <li>Brasil Colônia</li>
+        <li>Grandes Navegações</li>
+        <li>Idade Média</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🧪 Ciências</h2>
+      <ul>
+        <li>Corpo humano</li>
+        <li>Ecossistemas</li>
+        <li>Meio ambiente</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>📌 Mochila Escolar Digital - Criado para o GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
