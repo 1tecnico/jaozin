@@ -1,120 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Mochila Escolar Dev</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4e73df, #1cc88a);
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mochila Escolar Dev</title>
 
-        header {
-            background-color: #2e59d9;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
+body{
+    font-family: Arial;
+    margin:0;
+    background:linear-gradient(135deg,#4e73df,#1cc88a);
+}
 
-        .card {
-            background-color: white;
-            width: 250px;
-            margin: 15px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-            transition: 0.3s;
-        }
+header{
+    background:#2e59d9;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+nav{
+    background:#224abe;
+    text-align:center;
+    padding:10px;
+}
 
-        .card h2 {
-            color: #4e73df;
-        }
+nav button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+nav button:hover{
+    background:#1cc88a;
+    color:white;
+}
 
-        footer {
-            background-color: #2e59d9;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    margin:15px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.card h2{
+    color:#4e73df;
+}
+
+.formulario{
+    text-align:center;
+    padding:30px;
+}
+
+input, textarea{
+    width:250px;
+    padding:10px;
+    margin:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+footer{
+    background:#2e59d9;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>🎒 Mochila Escolar - Desenvolvimento</h1>
-    <p>Organização das Matérias</p>
+<h1>🎒 Mochila Escolar Dev</h1>
+<p>Organização das Matérias</p>
 </header>
 
-<div class="container">
+<nav>
+<button onclick="mostrar('materias')">Matérias</button>
+<button onclick="mostrar('adicionar')">Adicionar Matéria</button>
+</nav>
 
-    <div class="card">
-        <h2>Lógica de Programação</h2>
-        <ul>
-        
-            <li>Fluxogramas</li>
-            <li>Variáveis</li>
-            <li>Estruturas Condicionais</li>
-            <li>Laços de Repetição</li>
-        </ul>
-    </div>
+<!-- AREA DAS MATERIAS -->
 
-    <div class="card">
-        <h2>Programação Web</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Responsividade</li>
-            <li>Git e GitHub</li>
-        </ul>
-    </div>
+<div id="materias" class="container">
 
-    <div class="card">
-        <h2>Sistemas Operacionais</h2>
-        <ul>
-            <li>Linux</li>
-            <li>Windows</li>
-            <li>Processos</li>
-            <li>Memória</li>
-            <li>Sistemas de Arquivos</li>
-        </ul>
-    </div>
+<div class="card">
+<h2>Lógica de Programação</h2>
+<ul>
+<li>Fluxogramas</li>
+<li>Variáveis</li>
+<li>Estruturas Condicionais</li>
+<li>Laços de Repetição</li>
+</ul>
+</div>
 
-    <div class="card">
-        <h2>POO JAVA</h2>
-        <ul>
-            <li>Classes e Objetos</li>
-            <li>Encapsulamento</li>
-            <li>Herança</li>
-            <li>Polimorfismo</li>
-            <li>Interfaces</li>
-        </ul>
-    </div>
+<div class="card">
+<h2>Programação Web</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Responsividade</li>
+</ul>
+</div>
+
+</div>
+
+<!-- AREA PARA ADICIONAR -->
+
+<div id="adicionar" class="formulario" style="display:none;">
+
+<h2>Adicionar Nova Matéria</h2>
+
+<input id="nomeMateria" placeholder="Nome da matéria"><br>
+
+<textarea id="conteudoMateria" placeholder="Conteúdos separados por vírgula"></textarea><br>
+
+<button onclick="adicionarMateria()">Adicionar</button>
 
 </div>
 
 <footer>
-    © 2026 - Mochila Escolar Dev
+© 2026 - Mochila Escolar Dev
 </footer>
 
+<script>
+
+function mostrar(pagina){
+
+document.getElementById("materias").style.display="none";
+document.getElementById("adicionar").style.display="none";
+
+document.getElementById(pagina).style.display="block";
+
+}
+
+function adicionarMateria(){
+
+let nome = document.getElementById("nomeMateria").value;
+let conteudo = document.getElementById("conteudoMateria").value;
+
+let lista = conteudo.split(",");
+
+let card = document.createElement("div");
+card.className="card";
+
+let html = "<h2>"+nome+"</h2><ul>";
+
+lista.forEach(function(item){
+html += "<li>"+item.trim()+"</li>";
+});
+
+html += "</ul>";
+
+card.innerHTML = html;
+
+document.getElementById("materias").appendChild(card);
+
+document.getElementById("nomeMateria").value="";
+document.getElementById("conteudoMateria").value="";
+
+alert("Matéria adicionada!");
+
+}
+
+</script>
+
 </body>
-    
 </html>
