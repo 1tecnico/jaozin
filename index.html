@@ -182,4 +182,134 @@ alert("Matéria adicionada!");
 </script>
 
 </body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Mochila Escolar Dev</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    margin:0;
+    background:#4e73df;
+    transition:0.3s;
+}
+
+header{
+    background:#2e59d9;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#224abe;
+    text-align:center;
+    padding:10px;
+}
+
+nav button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.tema{
+    text-align:center;
+    padding:30px;
+}
+
+.tema button{
+    width:120px;
+    margin:10px;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.preto{background:black;color:white;}
+.verde{background:green;color:white;}
+.amarelo{background:gold;}
+.vermelho{background:red;color:white;}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🎒 Mochila Escolar Dev</h1>
+</header>
+
+<nav>
+<button onclick="mostrar('materias')">Matérias</button>
+<button onclick="mostrar('cores')">Cores do Site</button>
+</nav>
+
+<div id="materias" class="container">
+
+<div class="card">
+<h2>Programação Web</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+</div>
+
+</div>
+
+<div id="cores" class="tema" style="display:none;">
+
+<h2>Escolha uma cor para o site</h2>
+
+<button class="preto" onclick="mudarCor('black')">Preto</button>
+<button class="verde" onclick="mudarCor('green')">Verde</button>
+<button class="amarelo" onclick="mudarCor('gold')">Amarelo</button>
+<button class="vermelho" onclick="mudarCor('red')">Vermelho</button>
+
+</div>
+
+<script>
+
+function mostrar(pagina){
+
+document.getElementById("materias").style.display="none";
+document.getElementById("cores").style.display="none";
+
+document.getElementById(pagina).style.display="block";
+
+}
+
+function mudarCor(cor){
+
+document.body.style.background = cor;
+
+}
+
+</script>
+
+</body>
+</html>
 </html>
