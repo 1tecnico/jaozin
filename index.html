@@ -312,4 +312,198 @@ document.body.style.background = cor;
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Mochila Escolar Dev</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    margin:0;
+    transition:0.3s;
+}
+
+/* TEMA PADRÃO */
+
+header{
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    text-align:center;
+    padding:10px;
+}
+
+nav button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+nav button:hover{
+    transform:scale(1.05);
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    margin:15px;
+    border-radius:10px;
+    box-shadow:0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.tema{
+    text-align:center;
+    padding:30px;
+}
+
+.tema button{
+    width:130px;
+    margin:10px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.tema button:hover{
+    transform:scale(1.1);
+}
+
+/* TEMAS */
+
+.tema-preto{
+    background:#111;
+}
+
+.tema-preto header,
+.tema-preto nav{
+    background:#000;
+}
+
+.tema-verde{
+    background:#1cc88a;
+}
+
+.tema-verde header,
+.tema-verde nav{
+    background:#0f7a50;
+}
+
+.tema-amarelo{
+    background:#ffd43b;
+}
+
+.tema-amarelo header,
+.tema-amarelo nav{
+    background:#e0a800;
+}
+
+.tema-vermelho{
+    background:#ff6b6b;
+}
+
+.tema-vermelho header,
+.tema-vermelho nav{
+    background:#c82333;
+}
+
+</style>
+</head>
+
+<body class="tema-verde">
+
+<header>
+<h1>🎒 Mochila Escolar Dev</h1>
+</header>
+
+<nav>
+<button onclick="mostrar('materias')">Matérias</button>
+<button onclick="mostrar('cores')">Cores do Site</button>
+</nav>
+
+<!-- MATERIAS -->
+
+<div id="materias" class="container">
+
+<div class="card">
+<h2>Programação Web</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Lógica de Programação</h2>
+<ul>
+<li>Variáveis</li>
+<li>Condições</li>
+<li>Loops</li>
+</ul>
+</div>
+
+</div>
+
+<!-- CORES -->
+
+<div id="cores" class="tema" style="display:none;">
+
+<h2>🎨 Escolha o tema do site</h2>
+
+<button style="background:black;color:white"
+onclick="mudarTema('tema-preto')">Preto</button>
+
+<button style="background:green;color:white"
+onclick="mudarTema('tema-verde')">Verde</button>
+
+<button style="background:gold"
+onclick="mudarTema('tema-amarelo')">Amarelo</button>
+
+<button style="background:red;color:white"
+onclick="mudarTema('tema-vermelho')">Vermelho</button>
+
+</div>
+
+<script>
+
+function mostrar(pagina){
+
+document.getElementById("materias").style.display="none";
+document.getElementById("cores").style.display="none";
+
+document.getElementById(pagina).style.display="block";
+
+}
+
+function mudarTema(tema){
+
+document.body.className = tema;
+
+}
+
+</script>
+
+</body>
+</html>
 </html>
