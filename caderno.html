@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caderno Digital</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+header{
+background:#1e293b;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+textarea{
+width:100%;
+height:400px;
+padding:15px;
+border-radius:10px;
+border:none;
+font-size:16px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+border-radius:6px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.voltar{
+background:#16a34a;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1 id="tituloMateria">Caderno</h1>
+
+</header>
+
+<div class="container">
+
+<h2>Anotações da matéria</h2>
+
+<textarea id="anotacoes" placeholder="Escreva aqui o que você estudou..."></textarea>
+
+<br>
+
+<button onclick="salvar()">💾 Salvar</button>
+
+<button class="voltar" onclick="voltar()">⬅ Voltar para Mochila</button>
+
+</div>
+
+<script>
+
+let params = new URLSearchParams(window.location.search);
+let materia = params.get("materia");
+
+document.getElementById("tituloMateria").innerText = "📚 " + materia;
+
+/* CARREGAR ANOTAÇÕES */
+
+let anotacaoSalva = localStorage.getItem("caderno_" + materia);
+
+if(anotacaoSalva){
+document.getElementById("anotacoes").value = anotacaoSalva;
+}
+
+/* SALVAR */
+
+function salvar(){
+
+let texto = document.getElementById("anotacoes").value;
+
+localStorage.setItem("caderno_" + materia, texto);
+
+alert("Anotações salvas!");
+
+}
+
+/* VOLTAR */
+
+function voltar(){
+
+window.location.href = "index.html";
+
+}
+
+</script>
+
+</body>
+</html>
