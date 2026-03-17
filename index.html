@@ -370,7 +370,114 @@ window.location.href = "caderno.html?materia=" + encodeURIComponent(materia);
 
 </script>
 
+</body><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caderno</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+header{
+background:#1e293b;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+textarea{
+width:100%;
+height:400px;
+padding:15px;
+border-radius:10px;
+border:none;
+font-size:16px;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+border-radius:6px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+}
+
+.voltar{
+background:#16a34a;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1 id="tituloMateria">Caderno</h1>
+</header>
+
+<div class="container">
+
+<textarea id="anotacoes" placeholder="Escreva aqui..."></textarea>
+
+<br>
+
+<button onclick="salvar()">💾 Salvar</button>
+<button class="voltar" onclick="voltar()">⬅ Voltar</button>
+
+</div>
+
+<script>
+
+// PEGAR NOME DA MATÉRIA
+let params = new URLSearchParams(window.location.search);
+let materia = params.get("materia");
+
+// EVITA ERRO
+if(!materia){
+materia = "Matéria";
+}
+
+document.getElementById("tituloMateria").innerText = "📚 " + materia;
+
+let chave = "caderno_" + materia;
+let textarea = document.getElementById("anotacoes");
+
+// CARREGAR
+let dados = localStorage.getItem(chave);
+if(dados){
+textarea.value = dados;
+}
+
+// SALVAR
+function salvar(){
+localStorage.setItem(chave, textarea.value);
+alert("Salvo!");
+}
+
+// VOLTAR
+function voltar(){
+window.location.href = "index.html";
+}
+
+</script>
+
 </body>
+</html>
 </html>
 </html>
 </html>
