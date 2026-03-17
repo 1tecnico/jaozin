@@ -236,5 +236,141 @@ window.location.href = "caderno.html?materia=" + encodeURIComponent(materia);
 </script>
 
 </body>
+  <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mochila Escolar - Ensino Médio</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+header{
+background:#1e293b;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+gap:20px;
+}
+
+.materia{
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+cursor:pointer;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.materia:hover{
+transform:scale(1.05);
+background:#dbeafe;
+}
+
+.categoria{
+margin-top:30px;
+}
+
+.categoria h2{
+color:white;
+margin-bottom:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🎒 Mochila Escolar - Ensino Médio</h1>
+<p>Clique em uma matéria para abrir o caderno</p>
+</header>
+
+<div class="container">
+
+<!-- LINGUAGENS -->
+
+<div class="categoria">
+<h2>📖 Linguagens</h2>
+
+<div class="grid">
+<div class="materia" onclick="abrir('Português')">Português</div>
+<div class="materia" onclick="abrir('Literatura')">Literatura</div>
+<div class="materia" onclick="abrir('Inglês')">Inglês</div>
+<div class="materia" onclick="abrir('Artes')">Artes</div>
+<div class="materia" onclick="abrir('Educação Física')">Educação Física</div>
+</div>
+
+</div>
+
+<!-- MATEMÁTICA -->
+
+<div class="categoria">
+<h2>📐 Matemática</h2>
+
+<div class="grid">
+<div class="materia" onclick="abrir('Matemática')">Matemática</div>
+</div>
+
+</div>
+
+<!-- CIÊNCIAS DA NATUREZA -->
+
+<div class="categoria">
+<h2>🔬 Ciências da Natureza</h2>
+
+<div class="grid">
+<div class="materia" onclick="abrir('Física')">Física</div>
+<div class="materia" onclick="abrir('Química')">Química</div>
+<div class="materia" onclick="abrir('Biologia')">Biologia</div>
+</div>
+
+</div>
+
+<!-- CIÊNCIAS HUMANAS -->
+
+<div class="categoria">
+<h2>🌎 Ciências Humanas</h2>
+
+<div class="grid">
+<div class="materia" onclick="abrir('História')">História</div>
+<div class="materia" onclick="abrir('Geografia')">Geografia</div>
+<div class="materia" onclick="abrir('Filosofia')">Filosofia</div>
+<div class="materia" onclick="abrir('Sociologia')">Sociologia</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function abrir(materia){
+window.location.href = "caderno.html?materia=" + encodeURIComponent(materia);
+}
+
+</script>
+
+</body>
+</html>
 </html>
 </html>
